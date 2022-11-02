@@ -6,7 +6,9 @@ public class Ejercicio5 {
 
 	public static void main(String[] args) {
 	
-	int random;
+	int random;//Variable 
+	int max=100;
+	int min=1;
 	String respuesta;
 	
 	//Creamos un escáner para poder leer los datos que introduzca el usuario por la consola.
@@ -16,34 +18,34 @@ public class Ejercicio5 {
 		
 	do { 
 		
-		random= (int)(Math.random()*100);
+		random= (int)((Math.random()*(max-min)+min));
 		
 		System.out.println("¿Es "+random+" el número que ha pensado?");
 		
 		respuesta= sc.next();
 
 		
-		switch (respuesta) {
+		if ("mayor".equals(respuesta)) {
+				
+			min= random+1;
 		
-		case "Mayor" ->
-		
-			random= (int)(Math.random()*random);
+		} else if ("menor".equals(respuesta)) {	
+				
+			max= random-1;
 			
-		case "Menor"-> 
-		
-			random= (int)(Math.random()*random);
-			
-		case "Sí"-> 
+		} else if ("igual".equals(respuesta)) {
 		
 			System.out.println("Muy bien!");
 			
-		default-> 
+		} else  {
 		
-			System.out.println("Respuesta no válida");
+			System.out.println("Respuesta no válida.");
 		
 		}
 		
-	} while ();
+		} while (!"igual".equals(respuesta));
 
+	
+	
 	}
 }
