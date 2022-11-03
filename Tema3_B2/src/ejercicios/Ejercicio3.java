@@ -27,9 +27,9 @@ public class Ejercicio3 {
 			suma+=contador;
 			contador++;
 			
-		} while (contador<num);
+		} while (contador<=num);
 		
-		System.out.println("Resultado: ");
+		System.out.println("Resultado: "+suma);
 	}
 
 }
