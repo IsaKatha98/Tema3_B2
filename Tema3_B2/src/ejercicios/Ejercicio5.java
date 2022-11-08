@@ -32,18 +32,18 @@ public class Ejercicio5 {
 				respuesta= sc.next();												//Guardamos la respuesta introducida por el usuario.
 
 		
-				if ("mayor".equals(respuesta)) {									//Establecemos la primera condición, si la respuesta introducida es "mayor";
-				
+				if ("menor".equals(respuesta)) {									//Establecemos la primera condición, si la respuesta introducida es "mayor";
+					
 					min= random+1;													//igualamos el mínimo a la suma del número más 1.
-		
-				} else if ("menor".equals(respuesta)) {								//Establecemos la segunda condición, cuando la respuesta sea "menor";
-				
+					
+				} else if ("mayor".equals(respuesta)) {								//Establecemos la segunda condición, cuando la respuesta sea "menor";
+					
 					max= random-1;													//igualamos la variable introducida a la resta del número aleatorio menos 1.
-			
+					
 				} else if (!"igual".equals(respuesta)) {							//En caso de introducir un mensaje no válido, se muestra el mensaje 
-		
+					
 					System.out.println("Respuesta no válida.");						//correspondiente y se repite el bucle.		
-			
+					break;
 				} 
 		
 			} while (!"igual".equals(respuesta));									//El bucle termina en el momento en que la respuesta sea igual.
